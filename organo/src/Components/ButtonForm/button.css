@@ -1,0 +1,12 @@
+.formBtn{
+    background-color: #6278F7;
+    font-family: montserrat, "sans-serif";
+    font-weight: 600;
+    font-style: bold;
+    color: white;
+    width: 8rem;
+    cursor: pointer;
+}
+.formBtn:hover{
+    color:#95ffd4
+}
