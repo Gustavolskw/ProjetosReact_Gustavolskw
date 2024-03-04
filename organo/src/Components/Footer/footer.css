@@ -1,0 +1,46 @@
+.Footer {
+  background-color: #6278F7;
+  color: white;
+}
+
+
+.Imagem-Logo {
+  width: 40%
+}
+
+.section-icons {
+  gap: 4rem
+}
+
+.text-footer {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 731px) {
+  .section-icons {
+    gap: 2rem
+  }
+
+  .Imagem-Logo {
+    width: 80%
+  }
+
+  .text-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 453px) {
+  .section-icons {
+    gap: 0.5rem
+  }
+
+  .Imagem-Logo {
+    width: 5rem
+  }
+
+  .text-footer {
+    font-size: 0.5rem;
+  }
+
+}

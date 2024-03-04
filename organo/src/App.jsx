@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Banner from './Components/Banner/Banner';
 import InputBox from './Components/InputBox/InputBox';
 import Time from './Components/Time/time';
-import Colaborador from './Components/colaborador/colaborador';
+import Footer from './Components/Footer/footer';
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
         corPrimaria: "#ffba05"
       },
       {
-        nome: ' Inovação e Gestão',
+        nome: 'Inovação e Gestão',
         corSecundaria: "#FFEEDF",
         corPrimaria: "#FF8A29"
       }
@@ -49,7 +50,6 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState([])
   const adicionarColaborador = (colaborador) => {
-    console.log(colaborador);
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -57,7 +57,15 @@ function App() {
     <div>
       <Banner></Banner>
       <InputBox times={times.map(time => time.nome)} cadastroColaborador={colaborador => adicionarColaborador(colaborador)}></InputBox>
-      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimnario={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>)}
+      {
+        times.map(time => <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimnario={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        ></Time>)}
+      <Footer></Footer>
 
     </div >
   );

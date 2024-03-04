@@ -3,8 +3,9 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.card-Colaborador img {
-    width: 100px;
+.img-perfil {
+    width: 8rem;
+    height: 8rem;
     bottom: -50px;
 }
 

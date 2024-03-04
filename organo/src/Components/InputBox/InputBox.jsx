@@ -22,6 +22,10 @@ const InputBox = (props) => {
             imagem: imagem,
             time: time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
